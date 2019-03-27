@@ -1,0 +1,25 @@
+{
+  "name": "@mgrush/react-native-components",
+  "version": "0.0.1",
+  "description": "基于React Native实现的UI组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'this is test output!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgrush/react-native-components.git"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "UI",
+    "Components"
+  ],
+  "author": "programmer.mgrush@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgrush/react-native-components/issues"
+  },
+  "homepage": "https://github.com/mgrush/react-native-components#readme"
+}
