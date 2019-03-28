@@ -4,7 +4,19 @@
   "description": "基于React Native实现的UI组件库",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'this is test output!'"
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^16.8.5",
+    "react-native": "^0.59.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-jest": "^24.5.0",
+    "jest": "^24.5.0",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "react-test-renderer": "^16.8.5"
   },
   "repository": {
     "type": "git",
