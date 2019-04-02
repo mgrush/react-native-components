@@ -1,11 +1,11 @@
-import throttle from 'decorators/throttle'
+import debounce from 'decorators/debounce'
 
 function runTest(expectTimes, threshold) {
   const intervalTimeout = 180
   const originFunc = jest.fn()
 
   class Person {
-    @throttle(threshold)
+    @debounce(threshold)
     greeting(){
       return originFunc()     
     }
@@ -20,7 +20,10 @@ function runTest(expectTimes, threshold) {
 
       if((new Date().getTime() - startTime) >= intervalTimeout) {
         clearInterval(interval)
-        resolve()
+
+        setTimeout(() => {
+          resolve()
+        }, 600)
       }
     }, 10)
   }).then(() => {
@@ -28,10 +31,10 @@ function runTest(expectTimes, threshold) {
   })
 }
 
-test('throttle, originFunc called once in 180ms with defaultThreshold = 500ms', () => {
-  return runTest(1) 
+test('debounce, originFunc called once in 180ms with defaultThreshold = 500ms', () => {
+  return runTest(1)
 })
 
-test('throttle, oringinFunc called twice in 180ms with threshold = 100ms', () => {
-  return runTest(2, 100)
+test('debounce, oringinFunc called once in 180ms with threshold = 100ms', () => {
+  return runTest(1, 100)
 })
